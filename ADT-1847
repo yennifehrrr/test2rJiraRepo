@@ -1,0 +1,13 @@
+
+LZbuild:
+  LZtest:
+      LZimage: python:2.7
+     LZ commands:
+       LZ #- pip install -r app/requirements.txt
+    LZ  when:
+       LZ event:
+        LZ  - push
+         LZ - pull_request
+LZpublish:
+  gcr:
+    storage_driver: overlay
